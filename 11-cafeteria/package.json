@@ -9,6 +9,16 @@
   "author": "Andy",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^5.0.0"
-  }
+    "autoprefixer": "^10.4.20",
+    "gulp": "^5.0.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^5.0.0",
+    "sass": "^1.79.4"
+  },
+  "browsersList": [
+    "last 1 version",
+    "> 1%"
+  ]
 }
