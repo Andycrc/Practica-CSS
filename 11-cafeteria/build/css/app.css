@@ -652,3 +652,12 @@ h3 {
   font-size: 4rem;
   font-weight: 700;
 }
+
+.nuestros-testimoniales {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .nuestros-testimoniales {
+    padding: 10rem;
+  }
+}

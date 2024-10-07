@@ -2,5 +2,9 @@
 @use 'base/mixins' as m;
 
 .nuestros-testimoniales{
+    padding: 2rem;
 
+    @include m.tablet {
+        padding: 10rem;
+    }
 }
