@@ -40,3 +40,13 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
+
+@mixin scroll{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    >*{
+        scroll-snap-align: center;
+    }
+}

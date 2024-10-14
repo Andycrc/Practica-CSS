@@ -370,6 +370,10 @@ a {
   text-decoration: none;
 }
 
+[class$=__heading] {
+  margin: 2rem 0;
+}
+
 .barra {
   display: none;
 }
@@ -475,5 +479,209 @@ a {
   .header__busqueda-boton {
     display: inline-block;
   }
+}
+
+.destinos__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .destinos__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .destinos__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.destino {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+}
+.destino__imagen {
+  width: 14rem;
+  height: 14rem;
+}
+.destino__nombre, .destino__distancia {
+  margin: 0;
+}
+
+.lugares__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 30rem);
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.lugares__grid > * {
+  scroll-snap-align: center;
+}
+@media (min-width: 768px) {
+  .lugares__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .lugares__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.lugar__imagen {
+  border-radius: 1rem;
+}
+.lugar__nombre {
+  font-size: 1.8rem;
+}
+
+.anfitrion {
+  color: #FFFFFF;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 15rem;
+  padding: 5rem;
+  background-image: linear-gradient(to bottom, #000 0%, #000 50%, transparent 50%), url(../img/anfitrion.jpg);
+  background-size: 100%, 60rem;
+  background-position: center, center bottom;
+  background-repeat: no-repeat;
+}
+@media (min-width: 480px) {
+  .anfitrion {
+    background-size: 100%, 70rem;
+    background-position: center, center 200%;
+  }
+}
+@media (min-width: 768px) {
+  .anfitrion {
+    grid-template-rows: unset;
+    background-image: linear-gradient(to right, #000 0%, #000 45%, transparent 55%), url(../img/anfitrion.jpg);
+    background-size: 100%, auto;
+    background-position: center, 50% 30%;
+    padding: 15rem 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .anfitrion {
+    background-position: center, right center;
+  }
+}
+@media (min-width: 768px) {
+  .anfitrion__contenido {
+    max-width: 50%;
+  }
+}
+.anfitrion__texto {
+  color: #FFFFFF;
+}
+.anfitrion__enlace {
+  background-color: #FFFFFF;
+  padding: 2rem 4rem;
+  color: #000;
+  margin-top: 1rem;
+  border-radius: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+}
+@media (min-width: 768px) {
+  .anfitrion__enlace {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 480px) {
+  .experiencias__listado {
+    display: grid;
+    grid-template-columns: repeat(3, 30rem);
+    gap: 2rem;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  .experiencias__listado > * {
+    scroll-snap-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .experiencias__listado {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.experiencias__imagen {
+  border-radius: 1rem;
+}
+.experiencias__titulo {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.experiencias__descipcion {
+  font-size: 1.8rem;
+}
+
+.footer {
+  background-color: rgb(242.85, 242.85, 242.85);
+  border-top: 1px solid hsl(0, 0%, 128.2352941176%);
+  padding-top: 5rem;
+}
+@media (min-width: 768px) {
+  .footer__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .footer__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.footer__heading {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.footer__enlace {
+  display: block;
+  color: #686868;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.footer__barra {
+  border-top: 1px solid #cecece;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+.footer__barranav {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer__barranav {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.footer__enlace--barra::before {
+  content: " - ";
+  margin-right: 0.5rem;
 }
 /*# sourceMappingURL=app.css.map */
