@@ -1,4 +1,4 @@
-@use 'variables' as v; 
+@use 'variables' as v;
 @use 'sass:color';
 
 
@@ -8,15 +8,18 @@
         @content;
     }
 }
-
 @mixin tablet {
     @media (min-width: v.$tablet) {
         @content;
     }
 }
-  
 @mixin desktop {
     @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin desktopXL {
+    @media (min-width: v.$desktopxl) {
         @content;
     }
 }
@@ -34,13 +37,14 @@
     border: none;
     transition-property: background-color;
     transition-duration: .3s;
-    
+    text-align: center;
 
     @include tablet {
         width: auto;
     }
     &:hover {
         background-color: color.adjust($bgColor, $lightness: -10%)
+        
     }
 }
 
@@ -50,8 +54,22 @@
     grid-template-columns: repeat($columnas, 1fr);
 }
 
+@mixin imagen($url){
+    background-image: url($url);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 @mixin heading{
     text-align: center;
-    margin: 0;
-    color: v.$gris;
+    &::after{
+        content: '';
+        display: block;
+        height: 10rem;
+        background-image: url(../img/separador.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
 }

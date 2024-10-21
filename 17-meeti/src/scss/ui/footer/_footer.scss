@@ -1,0 +1,12 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.footer{
+    padding-top: 4rem;
+
+    &__copyright{
+        padding: 1rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.asidebar{
+   
+    &__contenido{
+        background-color: v.$secundario;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    &__heading,
+    &__fecha,
+    &__direccion{
+        color: v.$blanco;
+    }
+
+    &__heading{
+        span{
+            font-weight: 700;
+        }
+    }
+    &__fecha{
+        span{
+            font-weight: 700;
+        }
+    }
+
+    
+  &__imagen{
+    width: 100%;
+  }
+   
+}
